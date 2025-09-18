@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Airbnb Clone</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h1>Welcome <%= user ? user.username : 'Guest' %></h1>
+    <ul>
+        <% if(listings){ listings.forEach(listing => { %>
+            <li><%= listing.title %> - $<%= listing.price %></li>
+        <% }) } %>
+    </ul>
+    <%- include('partials/footer') %>
+</body>
+</html>
