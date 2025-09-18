@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Bookings - Airbnb Clone</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h2>My Bookings</h2>
+    <ul>
+        <% bookings.forEach(booking => { %>
+            <li>Booking ID: <%= booking.id %>, Listing: <%= booking.listing_id %>, From: <%= booking.start_date %> To: <%= booking.end_date %></li>
+        <% }) %>
+    </ul>
+    <%- include('partials/footer') %>
+</body>
+</html>
