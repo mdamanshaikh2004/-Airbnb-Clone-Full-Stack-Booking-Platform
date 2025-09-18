@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Listing - Airbnb Clone</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h2>Create Listing</h2>
+    <form action="/listings/create" method="POST">
+        <input type="text" name="title" placeholder="Title" required /><br>
+        <textarea name="description" placeholder="Description"></textarea><br>
+        <input type="number" name="price" placeholder="Price" required /><br>
+        <button type="submit">Add Listing</button>
+    </form>
+    <%- include('partials/footer') %>
+</body>
+</html>
